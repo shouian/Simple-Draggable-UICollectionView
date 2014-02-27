@@ -21,6 +21,10 @@
 		039C882718499024006877CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039C880918499024006877CA /* UIKit.framework */; };
 		039C882F18499024006877CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 039C882D18499024006877CA /* InfoPlist.strings */; };
 		039C883118499024006877CA /* TestDragCollectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 039C883018499024006877CA /* TestDragCollectionViewTests.m */; };
+		039C8847184990C8006877CA /* LSCollectionViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 039C883D184990C8006877CA /* LSCollectionViewHelper.m */; };
+		039C8848184990C8006877CA /* LSCollectionViewLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 039C883F184990C8006877CA /* LSCollectionViewLayoutHelper.m */; };
+		039C8849184990C8006877CA /* DraggableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 039C8842184990C8006877CA /* DraggableCollectionViewFlowLayout.m */; };
+		039C884A184990C8006877CA /* UICollectionView+Draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 039C8844184990C8006877CA /* UICollectionView+Draggable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,16 @@
 		039C882C18499024006877CA /* TestDragCollectionViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestDragCollectionViewTests-Info.plist"; sourceTree = "<group>"; };
 		039C882E18499024006877CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		039C883018499024006877CA /* TestDragCollectionViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDragCollectionViewTests.m; sourceTree = "<group>"; };
+		039C883C184990C8006877CA /* LSCollectionViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCollectionViewHelper.h; sourceTree = "<group>"; };
+		039C883D184990C8006877CA /* LSCollectionViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCollectionViewHelper.m; sourceTree = "<group>"; };
+		039C883E184990C8006877CA /* LSCollectionViewLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCollectionViewLayoutHelper.h; sourceTree = "<group>"; };
+		039C883F184990C8006877CA /* LSCollectionViewLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCollectionViewLayoutHelper.m; sourceTree = "<group>"; };
+		039C8841184990C8006877CA /* DraggableCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		039C8842184990C8006877CA /* DraggableCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		039C8843184990C8006877CA /* UICollectionView+Draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Draggable.h"; sourceTree = "<group>"; };
+		039C8844184990C8006877CA /* UICollectionView+Draggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Draggable.m"; sourceTree = "<group>"; };
+		039C8845184990C8006877CA /* UICollectionViewDataSource_Draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDataSource_Draggable.h; sourceTree = "<group>"; };
+		039C8846184990C8006877CA /* UICollectionViewLayout_Warpable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLayout_Warpable.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +126,7 @@
 		039C880B18499024006877CA /* TestDragCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				039C883A184990C8006877CA /* DraggableCollectionView */,
 				039C881418499024006877CA /* AppDelegate.h */,
 				039C881518499024006877CA /* AppDelegate.m */,
 				039C881718499024006877CA /* Main.storyboard */,
@@ -150,6 +165,39 @@
 				039C882D18499024006877CA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		039C883A184990C8006877CA /* DraggableCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				039C883B184990C8006877CA /* Helpers */,
+				039C8840184990C8006877CA /* Layout */,
+				039C8843184990C8006877CA /* UICollectionView+Draggable.h */,
+				039C8844184990C8006877CA /* UICollectionView+Draggable.m */,
+				039C8845184990C8006877CA /* UICollectionViewDataSource_Draggable.h */,
+				039C8846184990C8006877CA /* UICollectionViewLayout_Warpable.h */,
+			);
+			path = DraggableCollectionView;
+			sourceTree = "<group>";
+		};
+		039C883B184990C8006877CA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				039C883C184990C8006877CA /* LSCollectionViewHelper.h */,
+				039C883D184990C8006877CA /* LSCollectionViewHelper.m */,
+				039C883E184990C8006877CA /* LSCollectionViewLayoutHelper.h */,
+				039C883F184990C8006877CA /* LSCollectionViewLayoutHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		039C8840184990C8006877CA /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				039C8841184990C8006877CA /* DraggableCollectionViewFlowLayout.h */,
+				039C8842184990C8006877CA /* DraggableCollectionViewFlowLayout.m */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				039C8849184990C8006877CA /* DraggableCollectionViewFlowLayout.m in Sources */,
 				039C881C18499024006877CA /* ViewController.m in Sources */,
+				039C8847184990C8006877CA /* LSCollectionViewHelper.m in Sources */,
 				039C881618499024006877CA /* AppDelegate.m in Sources */,
 				039C881218499024006877CA /* main.m in Sources */,
+				039C8848184990C8006877CA /* LSCollectionViewLayoutHelper.m in Sources */,
+				039C884A184990C8006877CA /* UICollectionView+Draggable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
